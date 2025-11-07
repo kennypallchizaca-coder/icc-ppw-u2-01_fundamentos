@@ -61,6 +61,13 @@
           },
           "defaultConfiguration": "development"
         },
+        "deploy": {
+          "builder": "angular-cli-ghpages:deploy",
+          "options": {
+            "baseHref": "/icc-ppw-u2-01_fundamentos/",
+            "buildTarget": "01-fundamentos:build:production"
+          }
+        },
         "extract-i18n": {
           "builder": "@angular/build:extract-i18n"
         },

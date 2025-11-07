@@ -6,7 +6,7 @@ import { ProyectosDosPages } from './features/ProyectosDosPages/ProyectosDosPage
 
 export const routes: Routes = [
   { path: '', component: HomePage },
-  { path: '/perfil', component: PerfilPage },
-  { path: '/proyectos', component: ProyectosPages },
-  { path: '/proyectos-dos', component: ProyectosDosPages },
+  { path: 'perfil', component: PerfilPage },
+  { path: 'proyectos', component: ProyectosPages },
+  { path: 'proyectos-dos', component: ProyectosDosPages },
 ];

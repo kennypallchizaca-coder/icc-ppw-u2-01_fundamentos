@@ -23,14 +23,3 @@
 
     <button (click)="addProyecto()">Agregar</button>
   </div>
-
-  <div>
-    <h3>Listado</h3>
-    <ul>
-      @for (proyecto of proyectos(); track proyecto.id) {
-        <li>{{ proyecto.nombre }} - {{ proyecto.descripcion }}</li>
-      }
-    </ul>
-  </div>
-  <app-listado-proyectos listname="Listado de Proyectos" [proyectos]="proyectos()"></app-listado-proyectos>
-</section>

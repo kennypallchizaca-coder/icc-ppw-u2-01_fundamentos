@@ -1,1 +1,12 @@
-<p>ProyectosDosPages works!</p>
+<app-listado-proyectos
+  listname="Listado de Proyectos"
+  [proyectos]="proyectosService.proyectos()"
+></app-listado-proyectos>
+
+<p>
+  Aquí está el listado de proyectos usando el componente listado-proyectos.
+</p>
+
+<app-add-proyecto
+  (newProyecto)="proyectosService.addProyecto($event)"
+></app-add-proyecto>

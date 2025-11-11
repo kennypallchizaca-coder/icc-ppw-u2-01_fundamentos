@@ -9,4 +9,8 @@
 
 <app-add-proyecto
   (newProyecto)="proyectosService.addProyecto($event)"
+  (removeProyecto)="proyectosService.deleteProyecto($event)"
+  (remove1Proyecto)="proyectosService.removeallProyecto($event)"
+  (removewithnm)="proyectosService.removewithname($event)"
 ></app-add-proyecto>
+

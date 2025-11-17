@@ -1,69 +1,75 @@
 <div class="row">
-    <div class="col">
+  <div class="col">
 
-        <form autocomplete="off" [formGroup]="myForm" (ngSubmit)="onSubmit()">
+    <form autocomplete="off" [formGroup]="myForm" (ngSubmit)="onSubmit()">
 
-            <!-- Campo Nombre -->
-            <div class="mb-3 row">
-                <label class="col-sm-3 col-form-label">Nombre</label>
-                <div class="col-sm-9">
-                    <input 
-                        type="text" 
-                        class="form-control" 
-                        placeholder="Nombre del usuario" 
-                        formControlName="nombre"
-                    >
-                    @if (isValidField('nombre')) {
-                        <p class="text-danger">{{ getFieldError('nombre') }}</p>
-                    }
-                </div>
-            </div>
+      <!-- Campo Nombre -->
+      <div class="mb-3 row">
+        <label class="col-sm-3 col-form-label">Nombre</label>
+        <div class="col-sm-9">
+          <input
+            type="text"
+            class="form-control"
+            placeholder="Nombre del usuario"
+            formControlName="nombre"
+          >
+          @if (formUtils.isValidField(myForm, 'nombre')) {
+            <p class="text-danger">
+              {{ formUtils.getFieldError(myForm, 'nombre') }}
+            </p>
+          }
+        </div>
+      </div>
 
-            <!-- Campo Edad -->
-            <div class="mb-3 row">
-                <label class="col-sm-3 col-form-label">Edad</label>
-                <div class="col-sm-9">
-                    <input 
-                        type="number" 
-                        class="form-control" 
-                        placeholder="Edad del usuario" 
-                        formControlName="edad"
-                    >
-                    @if (isValidField('edad')) {
-                        <p class="text-danger">{{ getFieldError('edad') }}</p>
-                    }
-                </div>
-            </div>
+      <!-- Campo Edad -->
+      <div class="mb-3 row">
+        <label class="col-sm-3 col-form-label">Edad</label>
+        <div class="col-sm-9">
+          <input
+            type="number"
+            class="form-control"
+            placeholder="Edad del usuario"
+            formControlName="edad"
+          >
+          @if (formUtils.isValidField(myForm, 'edad')) {
+            <p class="text-danger">
+              {{ formUtils.getFieldError(myForm, 'edad') }}
+            </p>
+          }
+        </div>
+      </div>
 
-            <!-- Campo Correo -->
-            <div class="mb-3 row">
-                <label class="col-sm-3 col-form-label">Correo</label>
-                <div class="col-sm-9">
-                    <input 
-                        type="email" 
-                        class="form-control" 
-                        placeholder="Correo electrónico" 
-                        formControlName="correo"
-                    >
-                    @if (isValidField('correo')) {
-                        <p class="text-danger">{{ getFieldError('correo') }}</p>
-                    }
-                </div>
-            </div>
+      <!-- Campo Correo -->
+      <div class="mb-3 row">
+        <label class="col-sm-3 col-form-label">Correo</label>
+        <div class="col-sm-9">
+          <input
+            type="email"
+            class="form-control"
+            placeholder="Correo electrónico"
+            formControlName="correo"
+          >
+          @if (formUtils.isValidField(myForm, 'correo')) {
+            <p class="text-danger">
+              {{ formUtils.getFieldError(myForm, 'correo') }}
+            </p>
+          }
+        </div>
+      </div>
 
-            <!-- Botón -->
-            <div class="row">
-                <div class="col">
-                    <button 
-                        type="submit" 
-                        class="btn btn-primary" 
-                    >
-                        Guardar
-                    </button>
-                </div>
-            </div>
+      <!-- Botón -->
+      <div class="row">
+        <div class="col text-end">
+          <button
+            type="submit"
+            class="btn btn-primary"
+          >
+            Guardar
+          </button>
+        </div>
+      </div>
 
-        </form>
+    </form>
 
-    </div>
+  </div>
 </div>

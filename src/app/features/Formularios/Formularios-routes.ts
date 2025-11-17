@@ -19,7 +19,7 @@ export const formulariosRoutes: Routes = [
       },
       {
         path: 'more',
-        title: 'Switches, Checkboxes y Radios',
+        title: 'Formulario Mas',
         component: FormulariosMorePage,
       },
       {
